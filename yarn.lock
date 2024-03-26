@@ -4828,10 +4828,9 @@ entities@^2.0.0:
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
   integrity sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==
 
-ergogen@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/ergogen/-/ergogen-4.0.2.tgz#325993c0b40869b6722395c156f3fbf005c35308"
-  integrity sha512-rKyiLGuz3O9DLGl6V1EnDsaiyIXWUxjJL44zLw1zYWg1eq0EudBcI8w1hmwuIndweppdGqwuXc7nEP0BFKUXWA==
+ergogen@ergogen/ergogen#develop:
+  version "4.0.5"
+  resolved "https://codeload.github.com/ergogen/ergogen/tar.gz/6079aaf332c46cc9c0dc967969be85b674b45aba"
   dependencies:
     fs-extra "^11.1.0"
     js-yaml "^3.14.1"
