@@ -1,5 +1,7 @@
 ## Ergogen GUI 
-This is a web interface for [Ergogen](https://github.com/mrzealot/ergogen) by @MrZealot.  
+This is a web interface for [Ergogen](https://github.com/mrzealot/ergogen) by @MrZealot.
+
+Original work by [@MvEerd](https://github.com/MvEerd).
 
 ### :warning: This repo currently relies on an outdated Webpack 4, moving to Webpack 5 is non-trivial due to outdated dependencies like openjscad which depend on browserify and node polyfills
 
