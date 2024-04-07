@@ -7,9 +7,10 @@ This adds some additional features like
 - Live preview reloading
 - VSCode editor (Monaco)
 - Live 3D model previews
-- Auto regenerate outlines, 3D models and PCBs.
+- Auto regenerate outlines, 3D models and PCBs
+- Bundles custom footprints from [github.com/ceoloide/ergogen-footprints](https://github.com/ceoloide/ergogen-footprints)
 
-See the live demo at [https://mveerd.github.io/ergogen-gui/](https://mveerd.github.io/ergogen-gui/)
+See the live demo at [https://ceoloide.github.io/ergogen-gui/](https://ceoloide.github.io/ergogen-gui/) or [https://ergogen.ceoloide.com](https://ergogen.ceoloide.com)
 
 ### Running locally
 #### `yarn install` - installs dependencies
@@ -21,7 +22,7 @@ To use this GUI with any github branch you can do the following;
 
 Clone this repository to your local machine; 
 ```shell
-git clone https://github.com/MvEerd/ergogen-gui.git
+git clone https://github.com/ceoloide/ergogen-gui.git
 ```
 
 Modify the following line in `package.json` 
@@ -30,7 +31,7 @@ Modify the following line in `package.json`
 ```
 to use a branch on github refer to it like so `<username>/<repo>#<branch>`
 ```json
-"ergogen": "mveerd/ergogen#mveerd",
+"ergogen": "ergogen/ergogen#develop",
 ```
 
 Then run `yarn install && yarn start` to start Ergogen GUI locally with the specified branch.  
