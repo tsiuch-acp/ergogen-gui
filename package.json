@@ -31,7 +31,7 @@
     "yaml-js": "^0.2.3"
   },
   "scripts": {
-    "build-ergogen": "cp -f patch/index.js node_modules/ergogen/src/footprints/index.js && rm -rf node_modules/ergogen/src/footprints/ceoloide && git clone https://github.com/ceoloide/ergogen-footprints.git node_modules/ergogen/src/footprints/ceoloide && cd node_modules/ergogen && yarn install && yarn run build && cp dist/ergogen.js ../../public/dependencies/ergogen.js",
+    "build-ergogen": "cp -f patch/footprints_index.js node_modules/ergogen/src/footprints/index.js && rm -rf node_modules/ergogen/src/footprints/ceoloide && git clone https://github.com/ceoloide/ergogen-footprints.git node_modules/ergogen/src/footprints/ceoloide && cd node_modules/ergogen && yarn install && yarn run build && cp dist/ergogen.js ../../public/dependencies/ergogen.js",
     "postinstall": "yarn run build-ergogen",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
