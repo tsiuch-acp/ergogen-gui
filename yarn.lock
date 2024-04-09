@@ -4832,7 +4832,7 @@ entities@^2.0.0:
 
 ergogen@ergogen/ergogen#develop:
   version "4.0.5"
-  resolved "https://codeload.github.com/ergogen/ergogen/tar.gz/1da40bce6f9ba2c8230973af0c87aee38f1f10c5"
+  resolved "https://codeload.github.com/ergogen/ergogen/tar.gz/886c22937d1b6bf64340d4fe3692f64c23c2c3fa"
   dependencies:
     fs-extra "^11.1.0"
     js-yaml "^3.14.1"
