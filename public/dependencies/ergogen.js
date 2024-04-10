@@ -397,12 +397,87 @@
 	    return result
 	};
 
+	var name = "ergogen";
+	var version$2 = "4.0.5";
+	var description = "Ergonomic keyboard layout generator";
+	var author = "Bán Dénes <mr@zealot.hu>";
+	var license = "MIT";
+	var homepage = "https://ergogen.xyz";
+	var repository = "github:ergogen/ergogen";
+	var bugs = "https://github.com/ergogen/ergogen/issues";
+	var main = "./src/ergogen.js";
+	var bin = "./src/cli.js";
+	var scripts = {
+		build: "rollup -c",
+		test: "mocha -r test/helpers/register test/index.js",
+		coverage: "nyc --reporter=html --reporter=text npm test"
+	};
+	var dependencies = {
+		"fs-extra": "^11.1.0",
+		"js-yaml": "^3.14.1",
+		jszip: "^3.10.1",
+		"kle-serial": "github:ergogen/kle-serial#ergogen",
+		makerjs: "github:ergogen/maker.js#ergogen",
+		mathjs: "^11.5.0",
+		yargs: "^17.6.2"
+	};
+	var devDependencies = {
+		"@rollup/plugin-commonjs": "^24.0.1",
+		"@rollup/plugin-json": "^6.0.0",
+		chai: "^4.3.7",
+		"chai-as-promised": "^7.1.1",
+		"dir-compare": "^4.0.0",
+		glob: "^8.1.0",
+		mocha: "^10.2.0",
+		nyc: "^15.1.0",
+		rollup: "^3.10.1",
+		sinon: "^15.0.1"
+	};
+	var nyc = {
+		all: true,
+		include: [
+			"src/**/*.js"
+		],
+		exclude: [
+			"src/templates/kicad8.js"
+		]
+	};
+	var require$$8 = {
+		name: name,
+		version: version$2,
+		description: description,
+		author: author,
+		license: license,
+		homepage: homepage,
+		repository: repository,
+		bugs: bugs,
+		main: main,
+		bin: bin,
+		scripts: scripts,
+		dependencies: dependencies,
+		devDependencies: devDependencies,
+		nyc: nyc
+	};
+
 	const yaml$1 = require$$2;
 	const makerjs = require$$0;
 
 	const u$6 = utils;
 	const a$8 = assert$1;
 	const kle = kle$2;
+
+	const package_json = require$$8;
+
+	const fake_require = io$1.fake_require = injection => name => {
+	    const dependencies = {
+	        makerjs
+	    };
+	    if (name.endsWith('package.json')) {
+	        return package_json
+	    } else if (dependencies[name]) {
+	        return dependencies[name]
+	    } else throw new Error(`Unknown dependency "${name}" among the requirements of injection "${injection}"!`)
+	};
 
 	io$1.unpack = async (zip) => {
 
@@ -421,7 +496,7 @@
 	    for (const fp of fps.file(/.*\.js$/)) {
 	        const name = fp.name.slice('footprints/'.length).split('.')[0];
 	        const text = await fp.async('string');
-	        const parsed = new Function(module_prefix + text + module_suffix)();
+	        const parsed = new Function('require', module_prefix + text + module_suffix)(fake_require(name));
 	        // TODO: some sort of footprint validation?
 	        injections.push(['footprint', name, parsed]);
 	    }
@@ -431,7 +506,7 @@
 	    for (const tpl of tpls.file(/.*\.js$/)) {
 	        const name = tpl.name.slice('templates/'.length).split('.')[0];
 	        const text = await tpl.async('string');
-	        const parsed = new Function(module_prefix + text + module_suffix)();
+	        const parsed = new Function('require', module_prefix + text + module_suffix)(fake_require(name));
 	        // TODO: some sort of template validation?
 	        injections.push(['template', name, parsed]);
 	    }
@@ -9689,6 +9764,7 @@
 	};
 
 	const m = require$$0;
+	const version$1 = require$$8.version;
 
 	var kicad8 = {
 
@@ -9735,7 +9811,7 @@
 (kicad_pcb
   (version 20240108)
   (generator "ergogen")
-  (generator_version "4.0.5")
+  (generator_version "${version$1}")
   (general
     (thickness 1.6)
     (legacy_teardrops no)
@@ -9826,8 +9902,8 @@
 	};
 
 	var templates = {
-	  kicad5: kicad5,
-	  kicad8: kicad8,
+	    kicad5: kicad5,
+	    kicad8: kicad8
 	};
 
 	const yaml = require$$2;
@@ -10071,68 +10147,6 @@
 	    }
 
 	    return results
-	};
-
-	var name = "ergogen";
-	var version$1 = "4.0.5";
-	var description = "Ergonomic keyboard layout generator";
-	var author = "Bán Dénes <mr@zealot.hu>";
-	var license = "MIT";
-	var homepage = "https://ergogen.xyz";
-	var repository = "github:ergogen/ergogen";
-	var bugs = "https://github.com/ergogen/ergogen/issues";
-	var main = "./src/ergogen.js";
-	var bin = "./src/cli.js";
-	var scripts = {
-		build: "rollup -c",
-		test: "mocha -r test/helpers/register test/index.js",
-		coverage: "nyc --reporter=html --reporter=text npm test"
-	};
-	var dependencies = {
-		"fs-extra": "^11.1.0",
-		"js-yaml": "^3.14.1",
-		jszip: "^3.10.1",
-		"kle-serial": "github:ergogen/kle-serial#ergogen",
-		makerjs: "github:ergogen/maker.js#ergogen",
-		mathjs: "^11.5.0",
-		yargs: "^17.6.2"
-	};
-	var devDependencies = {
-		"@rollup/plugin-commonjs": "^24.0.1",
-		"@rollup/plugin-json": "^6.0.0",
-		chai: "^4.3.7",
-		"chai-as-promised": "^7.1.1",
-		"dir-compare": "^4.0.0",
-		glob: "^8.1.0",
-		mocha: "^10.2.0",
-		nyc: "^15.1.0",
-		rollup: "^3.10.1",
-		sinon: "^15.0.1"
-	};
-	var nyc = {
-		all: true,
-		include: [
-			"src/**/*.js"
-		],
-		exclude: [
-			"src/templates/kicad8.js"
-		]
-	};
-	var require$$8 = {
-		name: name,
-		version: version$1,
-		description: description,
-		author: author,
-		license: license,
-		homepage: homepage,
-		repository: repository,
-		bugs: bugs,
-		main: main,
-		bin: bin,
-		scripts: scripts,
-		dependencies: dependencies,
-		devDependencies: devDependencies,
-		nyc: nyc
 	};
 
 	const u = utils;

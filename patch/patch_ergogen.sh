@@ -17,9 +17,6 @@ if [ -d node_modules/ergogen ]; then
   fi
   git clone https://github.com/infused-kim/kb_ergogen_fp.git node_modules/ergogen/src/footprints/infused-kim
   # Add the footprints to the index
-  echo "Patching `footprints/index.js`..."
+  echo "Patching footprints/index.js..."
   cp -f patch/footprints_index.js node_modules/ergogen/src/footprints/index.js
-  # Make KiCad 8 the default
-  echo "Patching `pcbs.js`..."
-  sed -i -e 's/kicad5/kicad8/g' node_modules/ergogen/src/pcbs.js
 fi
