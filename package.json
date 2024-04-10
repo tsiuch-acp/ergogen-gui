@@ -10,7 +10,7 @@
   "dependencies": {
     "@monaco-editor/react": "^4.2.2",
     "@svgdotjs/svg.js": "^3.2.0",
-    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",
