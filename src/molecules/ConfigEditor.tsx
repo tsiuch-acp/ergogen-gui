@@ -21,7 +21,7 @@ const ConfigEditor = ({className}: Props) => {
 
     useEffect(() => {
         handleChange(configInput);
-    }, []);
+    });
 
     return (
         <div className={className}>

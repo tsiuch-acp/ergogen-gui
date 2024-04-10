@@ -111,7 +111,7 @@ const ConfigContextProvider = ({initialInput, children}: Props) => {
         if(autoGen) {
             processInput(configInput, { pointsonly: !autoGen3D });
         }
-    }, [configInput, processInput]);
+    }, [configInput, processInput, autoGen, autoGen3D]);
 
 
     return (
