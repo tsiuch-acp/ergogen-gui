@@ -25,7 +25,7 @@
     "react-dom": "^18.2.0",
     "react-easy-panzoom": "^0.4.4",
     "react-scripts": "4.0.3",
-    "react-select": "^5.2.1",
+    "react-select": "^5.8.0",
     "react-split": "^2.0.14",
     "react-use": "^17.3.2",
     "styled-components": "^5.3.1",
