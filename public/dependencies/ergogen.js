@@ -1,5 +1,5 @@
 /*!
- * Ergogen v4.0.5
+ * Ergogen v4.1.0
  * https://ergogen.xyz
  */
 
@@ -398,7 +398,7 @@
 	};
 
 	var name = "ergogen";
-	var version$2 = "4.0.5";
+	var version$2 = "4.1.0";
 	var description = "Ergonomic keyboard layout generator";
 	var author = "Bán Dénes <mr@zealot.hu>";
 	var license = "MIT";
