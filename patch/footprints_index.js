@@ -20,7 +20,6 @@ module.exports = {
   'ceoloide/battery_connector_jst_ph_2': require('./ceoloide/battery_connector_jst_ph_2'),
   'ceoloide/diode_tht_sod123': require('./ceoloide/diode_tht_sod123'),
   'ceoloide/display_nice_view': require('./ceoloide/display_nice_view'),
-  'ceoloide/display_ssd1306_nice_view': require('./ceoloide/display_ssd1306_nice_view'),
   'ceoloide/display_ssd1306': require('./ceoloide/display_ssd1306'),
   'ceoloide/led_sk6812mini-e': require('./ceoloide/led_sk6812mini-e'),
   'ceoloide/mcu_nice_nano': require('./ceoloide/mcu_nice_nano'),
