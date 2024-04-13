@@ -25,6 +25,7 @@ module.exports = {
   'ceoloide/mcu_nice_nano': require('./ceoloide/mcu_nice_nano'),
   'ceoloide/mounting_hole_npth': require('./ceoloide/mounting_hole_npth'),
   'ceoloide/power_switch_smd_side': require('./ceoloide/power_switch_smd_side'),
+  'ceoloide/reset_switch_smd_side': require('./ceoloide/reset_switch_smd_side'),
   'ceoloide/reset_switch_tht_top': require('./ceoloide/reset_switch_tht_top'),
   'ceoloide/switch_choc_v1_v2': require('./ceoloide/switch_choc_v1_v2'),
   'ceoloide/trrs_pj320a': require('./ceoloide/trrs_pj320a'),
