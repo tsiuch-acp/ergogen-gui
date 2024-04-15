@@ -19,6 +19,7 @@ module.exports = {
   via: require('./via'),
   // @ceoloide's footprints
   'ceoloide/battery_connector_jst_ph_2': require('./ceoloide/battery_connector_jst_ph_2'),
+  'ceoloide/battery_connector_molex_pico_ezmate_1x02': require('./ceoloide/battery_connector_molex_pico_ezmate_1x02'),
   'ceoloide/diode_tht_sod123': require('./ceoloide/diode_tht_sod123'),
   'ceoloide/display_nice_view': require('./ceoloide/display_nice_view'),
   'ceoloide/display_ssd1306': require('./ceoloide/display_ssd1306'),
