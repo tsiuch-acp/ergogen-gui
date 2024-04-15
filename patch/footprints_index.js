@@ -17,6 +17,7 @@ module.exports = {
   slider: require('./slider'),
   trrs: require('./trrs'),
   via: require('./via'),
+  // @ceoloide's footprints
   'ceoloide/battery_connector_jst_ph_2': require('./ceoloide/battery_connector_jst_ph_2'),
   'ceoloide/diode_tht_sod123': require('./ceoloide/diode_tht_sod123'),
   'ceoloide/display_nice_view': require('./ceoloide/display_nice_view'),
@@ -32,7 +33,9 @@ module.exports = {
   'ceoloide/trrs_pj320a': require('./ceoloide/trrs_pj320a'),
   'ceoloide/utility_ergogen_logo': require('./ceoloide/utility_ergogen_logo'),
   'ceoloide/utility_filled_zone': require('./ceoloide/utility_filled_zone'),
+  'ceoloide/utility_point_debugger': require('./ceoloide/utility_point_debugger'),
   'ceoloide/utility_text': require('./ceoloide/utility_text'),
+  // @infused-kim's footprints
   'infused-kim/choc': require('./infused-kim/choc.js'),
   'infused-kim/conn_molex_pico_ezmate_1x02': require('./infused-kim/conn_molex_pico_ezmate_1x02.js'),
   'infused-kim/conn_molex_pico_ezmate_1x05': require('./infused-kim/conn_molex_pico_ezmate_1x05.js'),
