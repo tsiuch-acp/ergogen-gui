@@ -24,6 +24,7 @@ module.exports = {
   'ceoloide/led_sk6812mini-e': require('./ceoloide/led_sk6812mini-e'),
   'ceoloide/mcu_nice_nano': require('./ceoloide/mcu_nice_nano'),
   'ceoloide/mounting_hole_npth': require('./ceoloide/mounting_hole_npth'),
+  'ceoloide/mounting_hole_plated': require('./ceoloide/mounting_hole_plated'),
   'ceoloide/power_switch_smd_side': require('./ceoloide/power_switch_smd_side'),
   'ceoloide/reset_switch_smd_side': require('./ceoloide/reset_switch_smd_side'),
   'ceoloide/reset_switch_tht_top': require('./ceoloide/reset_switch_tht_top'),
