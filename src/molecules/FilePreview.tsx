@@ -1,5 +1,4 @@
 import SvgPreview from "../atoms/SvgPreview";
-import JscadPreview from "../atoms/JscadPreview";
 
 type Props = {
     previewKey: string,
@@ -17,10 +16,6 @@ const FilePreview = ({previewKey, previewContent, width = '100%', height = '100%
             case 'svg':
                 return (
                     <SvgPreview svg={previewContent} width={width} height={height}/>
-                )
-            case 'jscad':
-                return (
-                    <JscadPreview previewContent={previewContent}/>
                 )
             default:
                 return <></>;

@@ -11,10 +11,6 @@ type TabsProps = {
     tabs: Array<TabPaneProps>
 }
 
-type TabProps = {
-    active: boolean
-}
-
 const TabContainer = styled.div`
     display: flex;
     align-content: space-between;
@@ -35,7 +31,6 @@ const Tab = styled.div`
     cursor: pointer;
     transition: background-color 150ms ease-in-out;
 
-    ${(props: TabProps) => props?.active ? `border-bottom: 0.2rem solid #28a745;` : ``}
     &:hover {
         background: #525252;
     }
@@ -63,7 +58,7 @@ const Tabs = ({tabs}: TabsProps) => {
         }}>
             <TabContainer>
                 {tabs?.map((tab, i) =>
-                    <Tab key={i} onClick={() => setTabIndex(i)} active={tabIndex === i}>{tab.label}</Tab>
+                    <Tab key={i} onClick={() => setTabIndex(i)} >{tab.label}</Tab>
                 )}
             </TabContainer>
             <TabPane content={activeTab.content}/>

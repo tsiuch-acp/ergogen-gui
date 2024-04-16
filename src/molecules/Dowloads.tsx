@@ -80,10 +80,9 @@ const Downloads = ({setPreview}: Props) => {
             downloads.push(
                 {
                     fileName: name,
-                    extension: 'stl',
+                    extension: 'jscad',
                     // @ts-ignore
-                    content: caseObj.stl,
-                    preview: `cases.${name}.jscad`
+                    content: caseObj.jscad
                 }
             )
         }
