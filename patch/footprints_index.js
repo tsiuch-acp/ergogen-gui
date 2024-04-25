@@ -31,6 +31,7 @@ module.exports = {
   'ceoloide/reset_switch_smd_side': require('./ceoloide/reset_switch_smd_side'),
   'ceoloide/reset_switch_tht_top': require('./ceoloide/reset_switch_tht_top'),
   'ceoloide/switch_choc_v1_v2': require('./ceoloide/switch_choc_v1_v2'),
+  'ceoloide/switch_gateron_ks27_ks33': require('./ceoloide/switch_gateron_ks27_ks33'),
   'ceoloide/switch_mx': require('./ceoloide/switch_mx'),
   'ceoloide/trrs_pj320a': require('./ceoloide/trrs_pj320a'),
   'ceoloide/utility_ergogen_logo': require('./ceoloide/utility_ergogen_logo'),
