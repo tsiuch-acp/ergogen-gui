@@ -30,6 +30,7 @@ module.exports = {
   'ceoloide/power_switch_smd_side': require('./ceoloide/power_switch_smd_side'),
   'ceoloide/reset_switch_smd_side': require('./ceoloide/reset_switch_smd_side'),
   'ceoloide/reset_switch_tht_top': require('./ceoloide/reset_switch_tht_top'),
+  'ceoloide/rotary_encoder_ec11_ec12': require('./ceoloide/rotary_encoder_ec11_ec12'),
   'ceoloide/switch_choc_v1_v2': require('./ceoloide/switch_choc_v1_v2'),
   'ceoloide/switch_gateron_ks27_ks33': require('./ceoloide/switch_gateron_ks27_ks33'),
   'ceoloide/switch_mx': require('./ceoloide/switch_mx'),
