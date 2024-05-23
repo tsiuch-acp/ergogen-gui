@@ -4819,7 +4819,7 @@
 	      const socket_hole_num_left = 24 - row_num;
 	      const socket_hole_num_right = 1 + row_num;
 	      const via_num_left = 124 - row_num;
-	      const via_num_right = 1 + row_num;
+	      const via_num_right = 101 + row_num;
 
 	      const net_left = get_pin_net_str(p, pin_name_left);
 	      const net_right = get_pin_net_str(p, pin_name_right);
