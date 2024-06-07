@@ -33,6 +33,7 @@ const SvgPreview = ({svg, width, height}: Props): JSX.Element => (
             height={height || '100%'}
             src={`data:image/svg+xml;utf8,${encodeURIComponent(svg)}`}
             alt={'Ergogen SVG Output preview'}
+            draggable="false"
         />
     </StyledPanZoom>
 );
