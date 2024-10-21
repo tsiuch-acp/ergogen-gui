@@ -5,7 +5,7 @@ const Reviung41: ConfigExample = {
     author: "jcmkk3",
     value: `
 units:
-  # `U` is a predefined unit of measure that means 19.05mm, which is MX spacing
+  # \`U\` is a predefined unit of measure that means 19.05mm, which is MX spacing
   angle: -8
 points:
   zones:
