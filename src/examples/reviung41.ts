@@ -5,7 +5,7 @@ const Reviung41: ConfigExample = {
     author: "jcmkk3",
     value: `
 units:
-  # \`U\` is a predefined unit of measure that means 19.05mm, which is MX spacing
+  # `U` is a predefined unit of measure that means 19.05mm, which is MX spacing
   angle: -8
 points:
   zones:
@@ -69,7 +69,7 @@ points:
         shift: [0, -1.15U]
       key:
         name: thumb_middle
-        width: 2.25
+        width: 2.25U
         row_net: P16
         column_net: P6
     thumb_reachy:
@@ -80,7 +80,7 @@ points:
         rotate: angle
       key:
         name: thumb_reachy
-        width: 1.25
+        width: 1.25U
         row_net: P16
         column_net: P20
         mirror.column_net: P15
@@ -92,7 +92,7 @@ points:
         rotate: -angle
       key:
         name: thumb_tucky
-        width: 1.25
+        width: 1.25U
         row_net: P16
         column_net: P21
         mirror.column_net: P14
