@@ -25,6 +25,7 @@ module.exports = {
   'ceoloide/display_ssd1306': require('./ceoloide/display_ssd1306'),
   'ceoloide/led_sk6812mini-e': require('./ceoloide/led_sk6812mini-e'),
   'ceoloide/mcu_nice_nano': require('./ceoloide/mcu_nice_nano'),
+  'ceoloide/mcu_supermini_nrf52840': require('./ceoloide/mcu_supermini_nrf52840'),
   'ceoloide/mounting_hole_npth': require('./ceoloide/mounting_hole_npth'),
   'ceoloide/mounting_hole_plated': require('./ceoloide/mounting_hole_plated'),
   'ceoloide/power_switch_smd_side': require('./ceoloide/power_switch_smd_side'),
