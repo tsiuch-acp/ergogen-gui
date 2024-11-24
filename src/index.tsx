@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { createRoot } from 'react-dom/client';
 import styled from "styled-components";
 import './index.css';
@@ -23,19 +22,13 @@ const root = createRoot(container!); // createRoot(container!) if you use TypeSc
 root.render(
   <React.StrictMode>
       <>  
-        <HelmetProvider>
-          <AppContainer>
-              <Helmet>
-                <title>Ergogen</title>
-                <link rel="canonical" href="https://ergogen.ceoloide.com/" />
-              </Helmet>
-              <Header />
-              <ConfigContextProvider initialInput={Absolem.value}>
-                <Ergogen />
-              </ConfigContextProvider>
-              <Footer/>
-          </AppContainer>
-        </HelmetProvider>
+        <AppContainer>
+            <Header />
+            <ConfigContextProvider initialInput={Absolem.value}>
+              <Ergogen />
+            </ConfigContextProvider>
+            <Footer/>
+        </AppContainer>
       </>
   </React.StrictMode>
 );
