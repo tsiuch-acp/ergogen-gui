@@ -18,5 +18,5 @@ if [ -d node_modules/ergogen ]; then
   git clone https://github.com/infused-kim/kb_ergogen_fp.git node_modules/ergogen/src/footprints/infused-kim
   # Add the footprints to the index
   echo "Patching footprints/index.js..."
-  cp -f patch/footprints_index.js node_modules/ergogen/src/footprints/index.js
+  patch/regenerate_index.sh node_modules/ergogen/src/footprints
 fi
